@@ -1,0 +1,482 @@
+<!doctype html>
+
+<html lang="en" class="light-style layout-menu-fixed layout-compact" dir="ltr" data-theme="theme-default"
+  data-assets-path="assets/" data-template="vertical-menu-template-free" data-style="light">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+  <title>Dashboard widget</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/vendor/fonts/boxicons.css" />
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/vendor/css/core.css" class="template-customizer-core-css" />
+  <link rel="stylesheet" href="assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+
+  <!-- Vendors CSS -->
+  <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+  <link rel="stylesheet" href="assets/vendor/libs/apex-charts/apex-charts.css" />
+
+</head>
+
+<body>
+  
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+      <!-- Layout container -->
+      <div class="layout-page">
+        <!-- Content wrapper -->
+        <div class="content-wrapper">
+          <!-- Content -->
+          <div class="container-xxl flex-grow-1 container-p-y">
+            <div class="row">
+              <!-- <div class="col-lg-12 mb-6 order-0">
+                <div class="card">
+                  <div class="d-flex align-items-start row">
+                    <div class="col-sm-6">
+                      <div class="card-body">
+                        <h5 class="card-title text-primary mb-3">Congratulations EoH! 🎉</h5>
+                        <p class="mb-6">
+                          You have done 72% more sales today.<br />Check your new badge in your profile.
+                        </p>
+
+                        <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Badges</a>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 text-center text-sm-left">
+                      <div class="card-body pb-0 px-0 px-md-6">
+                        <img src="assets/img/illustrations/man-with-laptop.png" height="165" class="scaleX-n1-rtl"
+                          alt="View Badge User" />
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+              <div class="col-12 col-md-12">
+                <div class="row">
+                  <div class="col mb-6">
+                    <div class="card h-100">
+                      <div class="card-body">
+                        <div class="card-title d-flex align-items-start justify-content-between mb-4">
+                          <div class="avatar flex-shrink-0">
+                      
+                            <i class='bx bx-bolt-circle' style="font-size:24px;color:#ff4d4f;"></i>
+                            
+                          </div>
+                          <div class="me-2">
+                            <small class="d-block">CÔNG SUẤT 3 PHA </small>
+                            <h6 class="fw-normal mb-0">Kwh</h6>
+                          </div>
+                          
+                          <div class="dropdown">
+                            <button class="btn p-0" type="button" id="cardOpt3" data-bs-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                              <i class="bx bx-dots-vertical-rounded text-muted"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt3">
+                              <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                              <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="mb-1">CÔNG SUẤT PHA A </p>
+                        <h4 class="card-title mb-3" id="P_1">--</h4>
+                        <p class="mb-1">CÔNG SUẤT PHA B </p>
+                        <h4 class="card-title mb-3" id="P_2">--</h4>
+                        <p class="mb-1">CÔNG SUẤT PHA C </p>
+                        <h4 class="card-title mb-3" id="P_3">--</h4>
+                        <small class="fw-medium" id="percentTemp"></small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mb-6">
+                    <div class="card h-100">
+                      <div class="card-body">
+                        <div class="card-title d-flex align-items-start justify-content-between mb-4">
+                          <div class="avatar flex-shrink-0">
+                            <img src="assets/img/icons/unicons/wallet-info.png" alt="wallet info" class="rounded" />
+                          </div>
+                          <div class="dropdown">
+                            <button class="btn p-0" type="button" id="cardOpt6" data-bs-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                              <i class="bx bx-dots-vertical-rounded text-muted"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
+                              <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                              <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="mb-1">Công suất biểu kiến Pha 1</p>
+                        <h4 class="card-title mb-3" id="V_A">--</h4>
+                        <p class="mb-1">Công suất biểu kiến Pha 2</p>
+                        <h4 class="card-title mb-3" id="V_B">--</h4>
+                        <p class="mb-1">Công suất biểu kiến Pha 3</p>
+                        <h4 class="card-title mb-3" id="V_C">--</h4>                        
+                        <small class="fw-medium" id="percentHumi"></small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mb-6">
+                    <div class="card h-100">
+                      <div class="card-body">
+                        <div class="card-title d-flex align-items-start justify-content-between mb-4">
+                          <div class="avatar flex-shrink-0">
+                            <span class="avatar-initial rounded bg-label-primary"><i
+                                class="bx bx-power-off"></i></span>
+                          </div>
+                          <div class="dropdown">
+                            <button class="btn p-0" type="button" id="cardOpt3" data-bs-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                              <i class="bx bx-dots-vertical-rounded text-muted"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt3">
+                              <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                              <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="mb-1">Relay 1</p>
+                        <div class="mb-3">
+                          <small style="color: black;" id="statusLed1"></small>
+                        </div>
+                        <button id="1turnOn" type="button" class="btn btn-outline-primary">Bật relay 1</button>
+                        <button id="1turnOff" type="button" class="btn btn-outline-secondary">Tắt  relay 1</button>
+                        <p class="mb-1">Relay 2</p>
+                        <div class="mb-3">
+                          <small style="color: black;" id="statusLed2"></small>
+                        </div>
+                        <button id="2turnOn" type="button" class="btn btn-outline-primary">Bật relay 2</button>
+                        <button id="2turnOff" type="button" class="btn btn-outline-secondary">Tắt relay 2</button>
+                        <p class="mb-1">Relay 3</p>
+                        <div class="mb-3">
+                          <small style="color: black;" id="statusLed3"></small>
+                        </div>
+                        <button id="3turnOn" type="button" class="btn btn-outline-primary">Bật relay 3</button>
+                        <button id="3turnOff" type="button" class="btn btn-outline-secondary">Tắt relay 3</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- PHAN V -->
+             
+
+
+              <div class="col-12 mb-6">
+                <div class="card h-100">
+                  <div class="card-header d-flex align-items-center justify-content-between">
+                    <h5 class="card-title m-0 me-2">Transactions</h5>
+                    <div class="dropdown">
+                      <button class="btn text-muted p-0" type="button" id="transactionID" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="bx bx-dots-vertical-rounded bx-lg"></i>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="transactionID">
+                        <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                        <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+                      </div>
+                    </div>
+                  </div>
+                   <style>
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        sans-serif;
+    background: var(--highcharts-background-color);
+    color: var(--highcharts-neutral-color-100);
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    margin: 10px auto 0 auto; /* giảm khoảng cách trên cùng */
+    position: relative;
+    top: -30px;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid var(--highcharts-neutral-color-10, #e6e6e6);
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: var(--highcharts-neutral-color-60, #666);
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tbody tr:nth-child(even) {
+    background: var(--highcharts-neutral-color-3, #f7f7f7);
+}
+
+.highcharts-description {
+    margin: 0.3rem 10px;
+}
+
+              </style>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- / Content -->
+        </div>
+        <!-- Content wrapper -->
+      </div>
+      <!-- / Layout page -->
+    </div>
+  </div>
+  <!-- / Layout wrapper -->
+
+  <!-- Core JS -->
+  <script src="assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="assets/vendor/libs/popper/popper.js"></script>
+  <script src="assets/vendor/js/bootstrap.js"></script>
+  <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="assets/vendor/js/menu.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="https://code.highcharts.com/themes/adaptive.js"></script>
+<figure class="highcharts-figure" style="display: flex; justify-content: space-around; align-items: center;">
+  <div id="gaugeA" style="width: 30%;"></div>
+  <div id="gaugeB" style="width: 30%;"></div>
+  <div id="gaugeC" style="width: 30%;"></div>
+</figure>
+
+  <!-- endbuild -->
+
+  <!-- Tải thư viện Era Widget -->
+  <script src="https://www.unpkg.com/@eohjsc/era-widget@1.1.3/src/index.js"></script>
+  <script>
+
+    // Lấy các phần tử HTML dựa trên ID, liên kết với giao diện người dùng
+    const power1 = document.getElementById('P_1'); 
+    const power2 = document.getElementById('P_2'); 
+    const power3 = document.getElementById('P_3');// Phần tử hiển thị nhiệt độ
+    const powerS1 = document.getElementById('V_A');  // Phần tử hiển thị độ ẩm
+    const powerS2 = document.getElementById('V_B'); 
+    const powerS3 = document.getElementById('V_C'); 
+    const turnOnrelay1 = document.getElementById('1turnOn');  // Nút bật đèn LED
+    const turnOffrelay1 = document.getElementById('1turnOff');
+    const turnOnrelay2 = document.getElementById('2turnOn');
+    const turnOffrelay2 = document.getElementById('2turnOff');
+    const turnOnrelay3 = document.getElementById('3turnOn');
+    const turnOffrelay3 = document.getElementById('3turnOff');
+    const statusLed1 = document.getElementById('statusLed1'); 
+    const statusLed2 = document.getElementById('statusLed2');
+    const statusLed3 = document.getElementById('statusLed3'); // Phần tử hiển thị trạng thái đèn LED
+
+    // Biến để lưu cấu hình và trạng thái hiện tại
+    let configPower1 = null, configPower2 = null, configPower3 = null;
+    let configPowerS1 = null,configPowerS2 = null,configPowerS3 = null;
+    let configLed1 = null, newStatusLed1 = null, actions1 = [];
+    let configLed2 = null, newStatusLed2 = null, actions2 = [];
+    let configLed3 = null, newStatusLed3 = null, actions3 = [];
+    const eraWidget = new EraWidget();
+    eraWidget.init({
+      needRealtimeConfigs: true,         /* Cần giá trị hiện thời */
+      needHistoryConfigs: true,          /* Cần giá trị lịch sử */
+      needActions: true,                 /* Cần các hành động (ví dụ Bật/Tắt đèn) */
+      maxRealtimeConfigsCount: 13,        /* Số lượng tối đa giá trị hiện thời */
+      maxHistoryConfigsCount: 1,         /* Số lượng tối đa giá trị lịch sử */
+      maxActionsCount: 6,                /* Số lượng tối đa các hành động có thể kích hoạt */
+      minRealtimeConfigsCount: 0,        /* Số lượng tối thiểu giá trị hiện thời */
+      minHistoryConfigsCount: 0,         /* Số lượng tối thiểu giá trị lịch sử */
+      minActionsCount: 0,                /* Số lượng tối thiểu hành động */
+
+      /* Hàm callback được gọi khi có cấu hình được nhận từ server */
+      onConfiguration: (configuration) => {
+        // Lưu các cấu hình khi nhận được từ widget
+        configPower1 = configuration.realtime_configs[0];
+        configPower2 = configuration.realtime_configs[1];
+        configPower3 = configuration.realtime_configs[2];    // Lưu cấu hình nhiệt độ
+        configPowerS1 = configuration.realtime_configs[3];
+        configPowerS2 = configuration.realtime_configs[4]; 
+        configPowerS3 = configuration.realtime_configs[5];   // Lưu cấu hình độ ẩm
+        configLed1 = configuration.realtime_configs[6];
+        configLed2 = configuration.realtime_configs[7];   // Lưu cấu hình đèn LED
+        configLed3 = configuration.realtime_configs[8]; 
+        actions = configuration.actions;
+        
+        
+        
+      },
+
+      /* Hàm callback được gọi khi nhận giá trị mới từ server */
+      onValues: (values) => {
+        // Cập nhật giá trị nhận được từ widget
+        const valuePower1 = values[configPower1.id].value;  // Giá trị nhiệt độ
+        const valuePower2 = values[configPower2.id].value;
+        const valuePower3 = values[configPower3.id].value;
+        const valueS1POWER = values[configPowerS1.id].value;  // Giá trị độ ẩm
+        const valueS2POWER = values[configPowerS2.id].value; 
+        const valueS3POWER = values[configPowerS3.id].value; 
+        const valueLed1 = values[configLed1.id].value;  // Giá trị trạng thái đèn LED
+        const valueLed2 = values[configLed2.id].value;
+        const valueLed3 = values[configLed3.id].value;
+
+        // Cập nhật giao diện người dùng với giá trị mới
+          power1.innerHTML = valuePower1 + ' Kwh';
+          power2.innerHTML = valuePower2 + ' Kwh';
+          power3.innerHTML = valuePower3 + ' Kwh';
+
+          powerS1.innerHTML = valueS1POWER + ' VA';  // Hiển thị độ ẩm
+          powerS2.innerHTML = valueS2POWER + ' VA';
+          powerS3.innerHTML = valueS3POWER + ' VA';
+        // Kiểm tra trạng thái mới của đèn LED, nếu thay đổi thì cập nhật
+      // if (newStatusLed1 !== valueLed1) {
+      //   newStatusLed1 = valueLed1;
+      //   statusLed1.innerHTML = valueLed1 === 1 ? 'Đang bật' : 'Đang tắt';
+      // }
+      // if (newStatusLed2 !== valueLed2) {
+      //   newStatusLed2 = valueLed2;
+      //   statusLed2.innerHTML = valueLed2 === 1 ? 'Đang bật' : 'Đang tắt';
+      // }
+      // if (newStatusLed3 !== valueLed3) {
+      //   newStatusLed3 = valueLed3;
+      //   statusLed3.innerHTML = valueLed3 === 1 ? 'Đang bật' : 'Đang tắt';
+      // }
+        if (newStatusLed1 !== valueLed1) {
+          newStatusLed1 = valueLed1;
+          if (valueLed1=== 1) {
+            statusLed1.innerHTML = 'Đèn đang bật';  // Hiển thị trạng thái đèn LED đang bật
+          } else {
+            statusLed1.innerHTML = 'Đèn đang tắt';  // Hiển thị trạng thái đèn LED đang tắt
+          }
+        }
+        if (newStatusLed2 !== valueLed2) {
+          newStatusLed2 = valueLed2;
+          if (valueLed2 === 1) {
+            statusLed2.innerHTML = 'Đèn đang bật';  // Hiển thị trạng thái đèn LED đang bật
+          } else {
+            statusLed2.innerHTML = 'Đèn đang tắt';  // Hiển thị trạng thái đèn LED đang tắt
+          }
+        }
+        if (newStatusLed3 !== valueLed3) {
+          newStatusLed3 = valueLed3;
+          if (valueLed3 === 1) {
+            statusLed3.innerHTML = 'Đèn đang bật';  // Hiển thị trạng thái đèn LED đang bật
+          } else {
+            statusLed3.innerHTML = 'Đèn đang tắt';  // Hiển thị trạng thái đèn LED đang tắt
+          }
+        }        
+      },
+    });
+  turnOnrelay1.addEventListener('click', () => {
+    eraWidget.triggerAction(actions[0]?.action, null);
+  });
+  turnOffrelay1.addEventListener('click', () => {
+    eraWidget.triggerAction(actions[1]?.action, null);
+  });
+
+  // Điều khiển relay 2
+  turnOnrelay2.addEventListener('click', () => {
+    eraWidget.triggerAction(actions[0]?.action, null);
+  }); 
+  turnOffrelay2.addEventListener('click', () => {
+    eraWidget.triggerAction(actions[1]?.action, null);
+  });
+
+  // Điều khiển relay 3
+  turnOnrelay3.addEventListener('click', () => {
+    eraWidget.triggerAction(actions[0]?.action, null);
+  });
+  turnOffrelay3.addEventListener('click', () => {
+    eraWidget.triggerAction(actions[1]?.action, null);
+  });
+    // // Kích hoạt các hành động dựa trên trạng thái của công tắc
+    // turnOn.addEventListener('click', () => {
+    //   eraWidget.triggerAction(actions[0]?.action, null);  // Kích hoạt hành động "Bật đèn"
+    // });
+    // turnOff.addEventListener('click', () => {
+    //   eraWidget.triggerAction(actions[1]?.action, null);  // Kích hoạt hành động "Tắt đèn"
+    // });
+// ====== HÀM TẠO GAUGE ======
+function createGauge(container, title, color) {
+  return Highcharts.chart(container, {
+    chart: {
+      type: 'gauge',
+      height: 250,
+      backgroundColor: 'transparent'
+    },
+    title: { text: title },
+    pane: { startAngle: -150, endAngle: 150 },
+    yAxis: {
+      min: 0,
+      max: 400, // giá trị công suất tối đa
+      tickInterval: 50,
+      plotBands: [
+        { from: 0, to: 200, color: '#55BF3B' },
+        { from: 200, to: 300, color: '#DDDF0D' },
+        { from: 300, to: 400, color: '#DF5353' }
+      ],
+      title: { text: 'kW' }
+    },
+    series: [{
+      name: title,
+      data: [0], // khởi đầu = 0
+      dial: { backgroundColor: color },
+      tooltip: { valueSuffix: ' kW' }
+    }]
+  });
+}
+
+// ====== KHỞI TẠO 3 GAUGE ======
+const gaugeA = createGauge('gaugeA', 'Pha A', '#007bff');
+const gaugeB = createGauge('gaugeB', 'Pha B', '#ff9800');
+const gaugeC = createGauge('gaugeC', 'Pha C', '#4caf50');
+
+// ====== ERA WIDGET ======
+    gaugeA.series[0].points[0].update(valuePower1);
+    gaugeB.series[0].points[0].update(valuePower2);
+    gaugeC.series[0].points[0].update(valuePower3);
+  </script>
+
+</body>
+
+</html>
